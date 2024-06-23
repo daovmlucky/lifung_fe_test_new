@@ -1,0 +1,8 @@
+<div>
+  <input type="text" placeholder="Search contacts" (input)="filterContacts($event)">
+  <ul>
+    <li *ngFor="let contact of filteredContacts">
+      <a [routerLink]="['/contact', contact.id]">{{ contact.name }}</a>
+    </li>
+  </ul>
+</div>
